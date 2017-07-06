@@ -23,7 +23,7 @@ and open the template in the editor.
                 <input type="submit" name="login"/>
             </form>
 
-        <a href="Register-form.php">S'inscrire</a>
+            <a href="Register-form.php">S'inscrire</a>
             <a href="Post-form.php">Poster une annonce</a>
 
             <?php
@@ -33,24 +33,28 @@ and open the template in the editor.
             echo '<a href="espaceperso.php">Espace personnel</a><br/>';
             echo '<a href="Post-form.php">Poster une annonce</a>';
         }
+        
         ?>
-
-        <!--<h1>Accueil</h1>
+            
+        <!--<h1>Accueil</h1>-->
         <form class="recherche">
             <select>
                 <option value="0" selected="">catégories</option>
-                <option value="1">1</option>
+                <option value="1">  informatique</option>
+                <option value="2">éducation</option>
+                <option value="3">immobilier</option>
+                <option value="4">finance</option>
             </select>
             <input type="text" placeholder="mot-clé"/>
             <input type="text" placeholder="Localisation"/>
             <input type="submit" value="Rechercher"/>
         </form>
-        -->
+
         <?php
         include_once './Post.php';
         include_once './DataBase.php';
         include_once 'User.php';
-        
+
         $dossier = 'posts/';
         $files = scandir($dossier);
         foreach ($files as $content) {
