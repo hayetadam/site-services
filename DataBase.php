@@ -101,7 +101,7 @@ class DataBase {
     }
 
     //suprimer annance
-    public function suprimerPost($post) {
+     public function suprimerPost($post) {
         unlink('posts/' . $post . '.txt');
     }
 

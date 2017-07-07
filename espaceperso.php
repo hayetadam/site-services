@@ -49,7 +49,7 @@ and open the template in the editor.
 
                     echo'
             <div class="boutons">
-            <form method="POST" action="delete.php">
+            <form method="POST" action="delet.php">
             <input type="hidden" name="filename" value="' . $annonce->getTitre() . '" class="text">
             <input type="submit" value="supprimer">
             </form>
