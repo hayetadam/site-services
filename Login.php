@@ -26,6 +26,7 @@ and open the template in the editor.
                     session_start();
                     $_SESSION['nom'] = $pseudo;
                     echo 'connecté';
+                    header("location:index.php");
                 } else {
                     echo 'pas connecté';
                 }
@@ -35,7 +36,7 @@ and open the template in the editor.
         } else {
             echo 'pas de données';
         }
-         header("location:index.php");
+         
 
         ?>
 

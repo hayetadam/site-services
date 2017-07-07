@@ -3,7 +3,7 @@
 include_once './User.php';
 include_once './DataBase.php';
 
-if (isset($_POST['inscription'])) {
+if (!empty($_POST['pseudo'])&&!empty($_POST['mdp'])) {
     
     $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
     $user = new User($post['pseudo'], md5($post['mdp']), $post['avatar'], $post['genre'], $post['age']);

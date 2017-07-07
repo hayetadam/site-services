@@ -26,7 +26,7 @@ and open the template in the editor.
                 <input type="radio" name="genre" value="masculin"/>Masculin</div>
             <label for="age">Age</label>
             <input type="number" name="age"/>
-            <input type="submit" name="inscription" value="Valider" />
+            <input type="submit" value="Valider" />
 
 
         </form>

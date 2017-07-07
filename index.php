@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -20,7 +21,7 @@ and open the template in the editor.
                 <input type="text" name="pseudo"/>
                 <label for="mdp">Mot de passe</label>
                 <input type="password" name="mdp"/>
-                <input type="submit" name="login"/>
+                <input type="submit"/>
             </form>
 
             <a href="Register-form.php">S'inscrire</a>

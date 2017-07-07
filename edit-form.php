@@ -14,23 +14,25 @@ and open the template in the editor.
         include_once './DataBase.php';
         include_once './User.php';
         include_once './Post.php';
+        
         $instance = new DataBase();
         if (isset($_POST['filename'])) {
             $file = htmlspecialchars($_POST['filename']);
-            $post = $instance->afficherPost($file);
+            $post = $instance->lirePost($file);
             $title = $post->getTitre();
             $description = $post->getDescription();
             $price = $post->getPrix();
             $photo = $post->getPhoto();
             echo'
-                <form action="edit.php" method="POST">
+              
+            <form action="edit.php" method="POST">
                     <label for="title">Titre</label>
-                    <input type="text" name="titre" value="' . $titre. '"/>
-                    <input type="hidden" name="ancienTitre" value="' . $titre . '"/>
+                    <input type="text" name="title" value="' . $title . '"/>
+                    <input type="hidden" name="ancienTitre" value="' . $title . '"/>
                     <label for="description">Description</label>
                     <textarea cols="30" rows="10" name="description" >' . $description . '</textarea>
                     <label for="price">Prix</label>
-                    <input type="number" name="prix" value="' . $prix . '"/> €
+                    <input type="number" name="price" value="' . $price . '"/> €
                     <label for="photo">Photo</label>
                     <input type="file"name="photo"/>
                     <input type="submit" value="Envoyer" name="editpost"/>

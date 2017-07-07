@@ -69,6 +69,13 @@ class User {
     function setAge($age) {
         $this->age = $age;
     }
+     public function afficherHtml() {
+        return '<pre>Pseudo : ' . $this->getPseudo() . '</pre><pre><img src="' .
+                $this->getAvatar() . '"></pre><pre>' .
+                $this->getGenre() . '</pre><pre>' .
+                $this->getAge() . '</pre><pre>';
+                //$this->getDateinscription()->format('d/m/y') . '</pre>';
+    }
 
     
 /*

@@ -10,6 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <h2>Mon Espace Personnel</h2>
         <?php
         include_once './User.php';
         include_once './DataBase.php';

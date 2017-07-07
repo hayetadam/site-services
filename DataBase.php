@@ -11,8 +11,7 @@
  *
  * @author hayet
  */
-
-include_once './User.php';
+//include_once './User.php';
 class DataBase {
 
     //création d'utilisateur
@@ -40,10 +39,10 @@ class DataBase {
     }
 
     public function afficherUser(User $user) {
-        return '<pre>Pseudo : ' . $user . '</pre><pre><img src="';
-//                $user->getAvatar() . '"></pre><pre>' .
-//                $user->getGenre() . '</pre><pre>' .
-//                $user->getAge() . '</pre>';
+        return '<pre>Pseudo : ' . $user . '</pre><pre><img src="' .
+                $user->getAvatar() . '"></pre><pre>' .
+                $user->getGenre() . '</pre><pre>' .
+                $user->getAge() . '</pre>';
     }
 
 //création d'une nouvelle annonce
@@ -57,7 +56,16 @@ class DataBase {
         fwrite($file, $postdata);
         fclose($file);
     }
-   
+
+    //unserialize user
+    public function lireUser($user): User {
+        return unserialize(file_get_contents('utilisateur/' . $user . '.txt'));
+    }
+//unserialize annonce
+     public function lirePost($titre): Post {
+        $post = unserialize(file_get_contents('posts/' . $titre . '.txt'));
+        return $post;
+    }
     public function afficherPost($post) {
         return '</pre><pre><img src="' .
                 $post->getPhoto() . '"></pre><pre>' .
@@ -68,9 +76,10 @@ class DataBase {
          * 
          */
     }
-   
+
     //parcourir les posts
-    public function afficherListPost(){
+
+    public function afficherListPost() {
         $dossier = './posts/';
         $files = scandir($dossier);
         $listeAnnonces = [];
