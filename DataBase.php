@@ -61,11 +61,13 @@ class DataBase {
     public function lireUser($user): User {
         return unserialize(file_get_contents('utilisateur/' . $user . '.txt'));
     }
+
 //unserialize annonce
-     public function lirePost($titre): Post {
+    public function lirePost($titre): Post {
         $post = unserialize(file_get_contents('posts/' . $titre . '.txt'));
         return $post;
     }
+
     public function afficherPost($post) {
         return '</pre><pre><img src="' .
                 $post->getPhoto() . '"></pre><pre>' .
@@ -101,7 +103,7 @@ class DataBase {
     }
 
     //suprimer annance
-     public function suprimerPost($post) {
+    public function suprimerPost($post) {
         unlink('posts/' . $post . '.txt');
     }
 
