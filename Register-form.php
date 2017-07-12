@@ -15,6 +15,18 @@ and open the template in the editor.
         <!--coller le lien bootstrap-->
         <title>Inscription</title>
         <style type="text/css"> 
+            
+            .form-group{
+                width: 500px;
+            }
+            .form-horizontal{
+                background-color: #FFE0B2;
+                padding-left: 400px;
+                padding-top: 100px;
+            }
+            h1{
+                padding-top: 50px;
+            }
         </style>
 
     </head>
@@ -22,7 +34,7 @@ and open the template in the editor.
 
 
 
-        <h1>INSCRIPTION</h1>
+        <h1 class="text-center">INSCRIPTION</h1>
         <form action="Register.php" method="POST" class="form-horizontal">
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Pseudo</label>
@@ -36,19 +48,28 @@ and open the template in the editor.
                     <input type="password" name="mdp" class="form-control" id="inputPassword3" placeholder="Password"/>
                 </div>
             </div>
-            <label for="avatar">Avatar</label>
-            <input type="file" name="avatar"/>
-            <label for="genre">Genre</label>
-            <div><input type="radio" name="genre" value="feminin"/>Féminin
-                <input type="radio" name="genre" value="masculin"/>Masculin</div>
-            
+
+            <div class="form-group">
+                <label for="inputAvatar3" class="col-sm-2 control-label">Avatar</label>
+                <div class="col-sm-10">
+                    <input type="file" name="avatar"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputGenre3" class="col-sm-2 control-label">Genre</label>
+                <div class="col-sm-10">
+                    <div><input type="radio" name="genre" value="feminin"/>Féminin
+                        <input type="radio" name="genre" value="masculin"/>Masculin</div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="inputAge3"class="col-sm-2 control-label">Age</label>
-                 <div class="col-sm-10">
-                <input type="number" name="age" class="form-control" id="inputage3" placeholder="Age" />
+                <div class="col-sm-10">
+                    <input type="number" name="age" class="form-control" id="inputage3" placeholder="Age" />
+                </div>
             </div>
-            </div>
-            
+
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="submit" class="btn btn-default" value="Valider" />

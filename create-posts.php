@@ -29,6 +29,7 @@ and open the template in the editor.
         
         */
         if (isset($_POST['newpost'])) {
+            
     session_start();
     if (isset($_SESSION['nom'])) {
         $user = $_SESSION['nom'];
