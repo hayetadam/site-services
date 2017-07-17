@@ -20,7 +20,7 @@ and open the template in the editor.
                 width: 500px;
             }
             .form-horizontal{
-                background-color: #FFE0B2;
+                background-color: #FF9800;
                 padding-left: 400px;
                 padding-top: 100px;
             }

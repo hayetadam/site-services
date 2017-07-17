@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-     <head>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">  	
         <meta name="viewport" content="width=device-width, user-scalable=yes" /><!--user-scalable=yes” sert à indiquer que l’utilisateur peut zoomer sur le contenu-->
@@ -15,41 +15,93 @@ and open the template in the editor.
         <!--coller le lien bootstrap-->
         <title>Connexion</title>
         <style type="text/css"> 
-            </style>
-            </head>
+            body{
+                background: #FFE0B2;
+            }
+            .form-horizontal{
+              width: 800px;
+                background-color: #FF9800;
+                margin-left: 300px;
+                margin-top: 40px;
+            }
+            .form-group{
+                width: 500px;
+            } 
+            
+        </style>
+    </head>
     <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a  class="btn btn-primary btn-lg"  href="Register-form.php">S'inscrire</a>
+                </div>
+        </nav>
         <?php
         session_start();
         if (isset($_SESSION['nom'])) {
             ?>
 
 
-        <form  action="create-posts.php" method="POST">
-                <label for="title">Titre</label>
-                <input type="text" name="titre"/>
-                <label for="description">Description</label>
+            <form class="form-horizontal" action="create-posts.php" method="POST"> 
+                 <div class="form-group">
+                <label for="inputtitle3" class="col-sm-2 control-label"  >Titre</label>
+                 <div class="col-sm-10">
+                <input class="form-control" id="inputtitle3" placeholder="Title" type="text" name="titre"/>
+                 </div>
+                 </div>
+                <div class="form-group">
+                <label for="inputdescription3" class="col-sm-2 control-label"  >Description</label>
+                 <div class="col-sm-10">
+                
                 <textarea cols="30" rows="10" name="description"></textarea>
-                <label for="price">Prix</label>
-                <input type="number" name="prix"/> €
-                <label for="photo">Photo</label>
-                <input type="file"name="photo"/>
-                <input type="submit" value="Envoyer" name="newpost"/>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="inputprice3" class="col-sm-2 control-label"  >Prix</label>
+                <div class="col-sm-10">
+                <input class="form-control" id="inputprice3" placeholder="Price"   type="number" name="prix"/> €
+                </div>
+                </div>
+                 <div class="form-group">
+                <label for="inputphoto3"  class="col-sm-2 control-label" >Photo</label>
+                 <div class="col-sm-10">
+                <input  class="form-control" id="inputphoto3" placeholder="Photo"   type="file"name="photo"/>
+                 </div>
+            </div>
+                <input class="btn btn-primary btn"  type="submit" value="Envoyer" name="newpost"/>
             </form>
 
             <?php
         } else {
             echo 'connectez-vous !';
             ?>
-            <form method="POST" action="Login.php">
-                <label for="pseudo">Pseudo</label>
-                <input type="text" name="pseudo"/>
-                <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp"/>
-                <input type="submit" name="login"/>
-            </form>
-            <a href="Register-form.php">S'inscrire</a>
-            <?php
-        }
-        ?>
-    </body>
-</html>
+            <form class="form-horizontal" method="POST" action="Login.php">
+                <div class="form-group">
+                    <label for="inputpseudo3" class="col-sm-2 control-label">Pseudo</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputpseudo3" placeholder="Pseudo"type="text" name="pseudo"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputpassword3"class="col-sm-2 control-label" >Mot de passe</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputpassword3" placeholder="Password" type="password" name="mdp"/>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <input class="btn btn-primary btn"type="submit" name="login"/>
+                            </div>
+
+                            </form>
+                            <?php
+                        }
+                        ?>
+                        </body>
+                        </html>
