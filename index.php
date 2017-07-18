@@ -54,8 +54,6 @@ and open the template in the editor.
                 display: flex;
                 justify-content: space-between;
             }
-
-
         </style>
     </head>
     <body class="container">
@@ -74,7 +72,6 @@ and open the template in the editor.
                     </div>
                 </div>
             </nav>
-
 
             <div class="inscription-form">
                 <form method="POST" action="Login.php">
@@ -99,12 +96,9 @@ and open the template in the editor.
         ?>
 
         <h1>Besoin d'un Service ?</h1>
-
-
         <form class="form-inline">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <select class="form-control placeholder">
-
                 <option value="0" selected="">catégories</option>
                 <option value="1">  informatique</option>
                 <option value="2">éducation</option>
@@ -118,12 +112,10 @@ and open the template in the editor.
             </div>
         </form>
 
-
         <?php
         include_once './Post.php';
         include_once './DataBase.php';
         include_once 'User.php';
-
         $dossier = 'posts/';
         $files = scandir($dossier);
         foreach ($files as $content) {
@@ -137,7 +129,6 @@ and open the template in the editor.
             }
         }
         ?>
-
         <!--Pour afficher le carrousel de Bootstrap utiliser les classes .carousel et .slide ainsi que l’attribut « data-ride » auquel nous donnerons la valeur « carousel »-->
         <div id="my_carousel" class="carousel slide" data-ride="carousel">
             <!-- Bulles Les marqueurs ronds seront mis en forme par la classe .carousel-indicators-->
@@ -180,8 +171,6 @@ and open the template in the editor.
                 <span class="sr-only">Suivant</span>
             </a>
         </div>
-
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
         <script type="text/javascript">
@@ -207,8 +196,5 @@ and open the template in the editor.
                 </div>
             </nav>
         </footer> 
-
-
     </body>
-
 </html>
